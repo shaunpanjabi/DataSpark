@@ -95,7 +95,7 @@ class DataSparker():
         request_type = ['input/', '/clear']
         url = self.base_url + request_type[0] + self.public_key + request_type[1] + '?private_key=' + self.private_key
         response = requests.get(url)
-        if response.status_code == httplib.ACCEPTED:
+        if response.status_code == httplib.OK:
             clear_status = True
         return clear_status
 
